@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "rag-front-streamlit"
+version = "0.1.0"
+description = ""
+authors = ["Federico Castañeda <fedecasta@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.32.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
