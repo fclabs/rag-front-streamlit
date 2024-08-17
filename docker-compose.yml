@@ -1,0 +1,6 @@
+services:
+  app:
+    image: app
+    build: ./frontend
+    ports:
+      - "8501:8501"

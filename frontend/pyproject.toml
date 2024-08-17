@@ -8,6 +8,9 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 streamlit = "^1.32.2"
+watchdog = "^4.0.2"
+langchain-community = "^0.2.12"
+langchain-openai = "^0.1.22"
 
 
 [tool.poetry.group.dev.dependencies]
