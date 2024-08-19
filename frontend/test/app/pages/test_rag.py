@@ -1,5 +1,5 @@
 
-from app.pages.common import load_sample_files
+from app.pages.lib.common import load_sample_files
 
 def test_load_sample_files():
     files, ext = load_sample_files("app/sample_files")

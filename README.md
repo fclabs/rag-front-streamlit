@@ -22,6 +22,15 @@ docker compose up --build
 
 After that, you can access the project in your browser at `http://localhost:8501`.
 
+## Testing
+
+To run the tests, you need to run the following command:
+
+```bash
+cd frontend
+poetry run python -m pytest
+```
+
 ## Sample files references
 
 The sample files are taken from the following sources:
