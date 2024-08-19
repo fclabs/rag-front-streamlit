@@ -9,6 +9,8 @@ This project show how to use LLMs for different tasks. It use Streamlit as front
 ### Requirements
 
 You need to have docker and docker-compose (if you are using an old version of docker) installed in your machine.
+To use the system, you need to have an OpenAi API key. You can get one [here](https://platform.openai.com/signup).
+The key needs to be loaded in the app using the `Start Here` section in the sidebar.
 
 ### Running
 
@@ -19,3 +21,10 @@ docker compose up --build
 ```
 
 After that, you can access the project in your browser at `http://localhost:8501`.
+
+## Sample files references
+
+The sample files are taken from the following sources:
+* AI-for-Education-RAG: [AI for Education](https://ai-for-education.org/wp-content/uploads/2024/03/AI-for-Education-RAG.pdf)
+* alice.txt: [Project Gutenberg](https://www.gutenberg.org/ebooks/11)
+* ArtOfWar-SunTzu.docx: Exported to Docs from [Project Gutenberg](https://www.gutenberg.org/ebooks/132)

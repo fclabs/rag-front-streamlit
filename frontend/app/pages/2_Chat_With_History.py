@@ -44,12 +44,4 @@ if prompt := st.chat_input():
 
 # Draw the messages at the end, so newly generated ones show up immediately
 with view_messages:
-    """
-    Message History initialized with:
-    ```python
-    msgs = StreamlitChatMessageHistory(key="langchain_messages")
-    ```
-
-    Contents of `st.session_state.langchain_messages`:
-    """
     view_messages.json(st.session_state.langchain_messages)
