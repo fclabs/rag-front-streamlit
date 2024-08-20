@@ -52,3 +52,4 @@ Depending on the specific use case, there are several strategies that can be use
 
 * Multi-model support could be added to the system, so it can use different models from different vendor for different tasks.
 * Few-shot learning could be added to the system, so it can learn from few examples and improve the quality of the responses. Analyzing the user feedback can be used to improve the model and rates.
+* Fine-tuning could be added to the system, so it can improve the quality of the responses for a specific task or domain. This could be done by using a smaller model and training it on a specific dataset, which save money and time (reduced latency).
