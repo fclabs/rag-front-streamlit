@@ -2348,6 +2348,22 @@ watchdog = {version = ">=2.1.5,<5", markers = "platform_system != \"Darwin\""}
 snowflake = ["snowflake-connector-python (>=2.8.0)", "snowflake-snowpark-python (>=0.9.0)"]
 
 [[package]]
+name = "tavily-python"
+version = "0.4.0"
+description = "Python wrapper for the Tavily API"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "tavily_python-0.4.0-py3-none-any.whl", hash = "sha256:b3fd0d7102bb34f0dfb0fd24378e2029504a9836ffe7f07c013824105d9f6a5a"},
+    {file = "tavily_python-0.4.0.tar.gz", hash = "sha256:e4517041dd135f171858d7e65a7cae085597871bbdc1a13d27990acb536e55c3"},
+]
+
+[package.dependencies]
+httpx = "*"
+requests = "*"
+tiktoken = ">=0.5.1"
+
+[[package]]
 name = "tenacity"
 version = "8.5.0"
 description = "Retry code until it succeeds"
@@ -2672,4 +2688,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "3.12.*"
-content-hash = "5e4197c12af1cf04ee749264c9b39ebdb4ed5580e518cde706f635e2184192a4"
+content-hash = "dc8b838a0fd81bd64f753920461dce62a380f386414cb4b42943addc31c25b4f"
