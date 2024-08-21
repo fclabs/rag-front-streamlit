@@ -73,7 +73,7 @@ with col2:
     st.write("## Pinecone Index Stats")
     st.write(f"Index Name: **{INDEX_NAME}**")
     st.write(stats)
-    st.button("Clear History", on_click=lambda: clear_index(pc_index))
+    st.button("Clear DB", on_click=lambda: clear_index(pc_index))
 
 ## RAG Chatbot
 st.divider()
