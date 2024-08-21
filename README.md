@@ -1,8 +1,8 @@
 # Readme
 
-## LTDR;
+## TLDR;
 
-This project show how to use LLMs for different tasks. It use Streamlit as frontend and LangChain and OpenAi as backend. 
+This project shows how to use LLMs for different tasks. It uses Streamlit as the frontend and LangChain and OpenAi as the backend. 
 
 ## How to run
 
