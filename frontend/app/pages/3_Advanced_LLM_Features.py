@@ -1,6 +1,5 @@
 from langchain_community.chat_message_histories import StreamlitChatMessageHistory
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.runnables.history import RunnableWithMessageHistory
+from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 
 import streamlit as st
@@ -27,12 +26,12 @@ User: {question}
 def get_response(chain, prompt , config):
     return chain.stream({"question": prompt}, config)
 
+st.set_page_config(layout="wide")
 st.write("## Tuneable Few Shots Movie Critique Chatbot")
 
 col1, col2 = st.columns([1, 2])
 with col1:
     system_prompt = st.text_area("System Prompt", FEW_SHOT_PROMPT, height=200)
-    st.button("Clear History", on_click=lambda: msgs.clear())
 with col2:
     st.text("ID of the model to use")
     model = st.selectbox("Model", ["gpt-4o-mini", "gpt-3.5-turbo", "gpt-4", "gpt-4o" ])
@@ -40,10 +39,6 @@ with col2:
     temperature = st.slider("Temperature", 0.0, 2.0, 0.7, 0.05)
     max_token = st.number_input("Max Tokens", 1, 2048, 1024, 1 , help="The maximum number of tokens to generate in the response. Depends on the model")
 
-# Set up memory
-msgs = StreamlitChatMessageHistory(key="langchain_messages")
-
-# Set up the LangChain, passing in Message History
 prompt = ChatPromptTemplate.from_messages(
     [
         ("system", system_prompt),
@@ -56,8 +51,8 @@ chain = prompt | llm_model
 
 
 # If user inputs a new prompt, generate and draw a new response
-if prompt := st.chat_input():
-    st.chat_message("human").write(prompt)
+if user_input := st.chat_input():
+    st.chat_message("human").write(user_input)
     # Note: new messages are saved to history automatically by Langchain during run
     config = {"configurable": {"session_id": "any"}}
-    st.chat_message("ai").write_stream(chain.stream({"question": prompt}, config))
+    st.chat_message("ai").write_stream(chain.stream({"question": user_input}, config))

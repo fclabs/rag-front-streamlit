@@ -14,7 +14,7 @@ The key needs to be loaded in the app using the `Start Here` section in the side
 
 ### Running
 
-To run the project, you need to run the following command:
+To run the project, you need to run the following command in the repo root:
 
 ```bash
 docker compose up --build

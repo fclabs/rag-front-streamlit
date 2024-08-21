@@ -1,3 +1,31 @@
+## Demo Documentation
+
+### RAG System
+
+The RAG system is a retrieval-augmented generation system that uses a large language model (LLM) to generate responses to user queries. 
+
+The system is designed to upload relevant documents, process and load them in a vector database (Pinecone). These documents are then used to retrieve relevant information to generate responses to user queries. OpenIA embdebbing model is used to generate the vector representation of the documents, so the system can use the most relevant documents using cosine similarity.
+
+The system uses a RAG model to combine the retrieved documents with the user query and generate a response. 
+
+### Chat with History
+
+The chat with history system is a conversational agent that uses a large language model (LLM) to generate responses to user queries.
+
+Chat history is stored in the session state, so the system can use the context of the conversation to generate more relevant responses. The system uses a pre-trained model to generate responses, so the quality of the responses depends on the quality of the model.
+
+The system support **multi-lingual conversations**, so it can generate responses in different languages. 
+
+### Advanced Features
+
+The example simulates a movie critic assistant, using a rating system trained with few-shot examples. 
+
+The model can also be tuned to generate responses for specific tasks or domains, so it can generate more relevant responses. The system uses a pre-trained model to generate responses, so the quality of the responses depends on the quality of the model.
+
+### Multi Agent
+
+The example use a multi-agent system to generate responses to user queries. The assistan simulated a travel assistant, using a multi-agent system to suggest locations, search for interesting places and weather conditions.
+
 ## System Performance
 
 ### Retrieval accuracy and relevance
@@ -53,3 +81,9 @@ Depending on the specific use case, there are several strategies that can be use
 * Multi-model support could be added to the system, so it can use different models from different vendor for different tasks.
 * Few-shot learning could be added to the system, so it can learn from few examples and improve the quality of the responses. Analyzing the user feedback can be used to improve the model and rates.
 * Fine-tuning could be added to the system, so it can improve the quality of the responses for a specific task or domain. This could be done by using a smaller model and training it on a specific dataset, which save money and time (reduced latency).
+
+### Multi Agent
+
+* Some LLM-based agents for procedures esxecuted locallly will improve the performance of the system, as it will reduce the latency of the responses.
+* Use LLM as a tool to solve specific tasks, like generating code or summarizing documents. Is not a good idea to use LLM for all the tasks, as it could be expensive and slow.
+* Conditional edges can be improved using more comple state records. For example, keeping records of executed agents in the state.

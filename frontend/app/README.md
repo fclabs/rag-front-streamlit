@@ -5,7 +5,6 @@
 To use this app you need to setup your own API key to test the app. You can do this going to the `Start Here` section in the sidebar and adding the following API keys:
 * `OpenAi API Key`: You can get one [here](https://platform.openai.com/signup). Read from OPENAI_API_KEY environment variable.
 * `Pinecone API Key`: You can get one [here](https://www.pinecone.io/). Read from PINECONE_API_KEY environment variable.
-* `Tavily API Key`: You can get one [here](https://tavily.com/). Read from TAVILY_API_KEY environment variable.
 
 Remember to press press ENTER to save the values. 
 
